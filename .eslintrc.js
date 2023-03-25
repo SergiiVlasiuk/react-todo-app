@@ -4,31 +4,50 @@ module.exports = {
     es2021  : true,
     node    : true,
   },
-  // extends       : ['eslint:recommended', 'plugin:react/recommended', 'plugin:json/recommended', 'prettier'],
-  extends       : ['eslint:recommended', 'plugin:react/recommended', 'prettier'],
+  // Extends       : ['eslint:recommended', 'plugin:react/recommended', 'plugin:json/recommended', 'prettier'],
   overrides     : [],
   parserOptions : {
-    ecmaVersion : 'latest',
-    sourceType  : 'module',
+    ecmaVersion  : 'latest',
+    sourceType   : 'module',
+    ecmaFeatures : {
+      'jsx': true
+    }
   },
-  plugins : ['react'],
-  rules   : {
+  // "devDependencies": {
+  // 	"eslint": "^8.36.0",
+  // 	"eslint-config-wesbos": "^3.0.2",
+  // 	"eslint-plugin-react": "^7.32.2"
+  // }
+  plugins: [
+    'react'
+    //  , 'react/jsx-runtime'
+  ],
+  extends: [
+    'eslint:recommended'
+    // 'eslint:all'
+    , 'plugin:react/recommended'
+    // , 'plugin:react/all'
+    , 'prettier'
+  ],
+  rules: {
     quotes             : ['error', 'single'],
-    // we want to force semicolons
+    // We want to force semicolons
     semi               : ['error', 'never'],
-    // we use 2 spaces to indent our code
+    // We use 2 spaces to indent our code
     indent             : ['error', 2],
-    // we want to avoid extraneous spaces
+    // We want to avoid extraneous spaces
     'no-multi-spaces'  : ['error'],
-    // we want to not validate props types
+    // We want to not validate props types
     'react/prop-types' : 0,
-    // we want to have a single space after colon
+    // We want to have a single space after colon
     'key-spacing'      : [
       'error',
       {
-        // 'afterColon': true,
-        // 'align': 'colon',
-        // 'on'        : 'colon',
+        /*
+         * 'afterColon': true,
+         * 'align': 'colon',
+         * 'on'        : 'colon',
+         */
         align: {
           beforeColon : true,
           afterColon  : true,
@@ -51,5 +70,32 @@ module.exports = {
     'dot-location'                  : ['error', 'property'],
     // 'dot-notation': ['error',{ 'allowKeywords': false }],
     'no-whitespace-before-property' : 'error',
+    'no-unused-vars'                : ['warn', {
+      'vars'               : 'all',
+      'args'               : 'after-used',
+      'ignoreRestSiblings' : false,
+    }],
+    // 'no-unused-vars'                : 'warn',
+    'comma-spacing'           : ['error', { 'before': false, 'after': true }],
+    'space-in-parens'         : ['error', 'always', { 'exceptions': ['{}', '[]'] }],
+    'template-tag-spacing'    : ['error', 'always'],
+    'max-statements-per-line' : ['error', { 'max': 1 }],
+    'react/jsx-uses-vars'     : 'error',
+    
+    // 'react/jsx-max-props-per-line': [1, {
+    //   'maximum': {},
+    //   // 'when': 'always',
+    // }],
+    // 'react/jsx-uses-react' : ['error'],
+    // 'react/jsx-uses-vars'  : ['error'],
+    // 'react/jsx-props-multiline': [true, {
+    //   'maximum': {
+    //     'single' : 1,
+    //     'multi'  : 2
+    //   },
+    //   'when': 'always',
+    // }],
+    
+    // 'react/jsx-filename-extension' : [1, { 'extensions': ['.js', '.jsx'] }],
   },
 }

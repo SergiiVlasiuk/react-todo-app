@@ -20,8 +20,12 @@
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
+  // "[javascript]": {
+  //   "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  // },
 
   "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact",
  }
 }
