@@ -2,9 +2,9 @@ import ContextTodo from 'ContextTodo'
 import React, { useContext } from 'react'
 
 const TodoItem = ({todo, index}) => {
-  const {id, title, done} = todo
+  const {id, title, completed} = todo
   const itemClasses = []
-  if ( done ) itemClasses.push( 'done' )
+  if ( completed ) itemClasses.push( 'done' )
 
   const {removeTodo, onToggleTodo} = useContext( ContextTodo )
 
@@ -13,7 +13,7 @@ const TodoItem = ({todo, index}) => {
       <span className={itemClasses.join( ' ' )}>
         <input 
           type="checkbox"
-          checked={done}
+          checked={completed}
           onChange={onToggleTodo.bind( null, id )}/>
         <strong>
           {index + 1}

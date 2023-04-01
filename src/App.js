@@ -12,9 +12,9 @@ const AddTodo = React.lazy( () => new Promise(
 
 function App() {
   const [todos, setTodos] = useState([
-    { id: 1, title: 'Learn english', done: false},
-    { id: 2, title: 'Learn js', done: true},
-    { id: 3, title: 'Make todo list application', done: false},
+    { id: 1, title: 'Learn english', completed: false},
+    { id: 2, title: 'Learn js', completed: true},
+    { id: 3, title: 'Make todo list application', completed: false},
   ])
   const[loading, setLoading]=useState( true )
   useEffect( ()=>{
@@ -31,16 +31,16 @@ function App() {
     setTodos( todos.filter( todo => id!=todo.id ) )
   const onToggleTodo = id =>
     setTodos( todos.map( todo => {
-      if ( todo.id == id ) todo.done = !todo.done
+      if ( todo.id == id ) todo.completed = !todo.completed
       return todo
     }) )
   const onCreate = title =>
     setTodos([
       ...todos,
       {
-        id   : Date.now(),
+        id        : Date.now(),
         title,
-        done : false,
+        completed : false,
       }
     ])
 
