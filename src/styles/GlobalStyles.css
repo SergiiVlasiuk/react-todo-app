@@ -30,7 +30,46 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 .container {
-	width: 90%;
+	width: 80%;
 	max-width: 1200px;
 	margin: 0 auto;
+	font-size: 1.6rem;
+}
+
+.container>* {
+	margin: .5rem auto;
+}
+
+
+/* todo list */
+.todo-list ul {
+	/* list-style: none; */
+	/* text-decoration: none; */
+	list-style-type: none;
+	padding: 0;
+}
+.todo-list input {
+	margin-right: 1rem;
+}
+.rm {
+	background-color: red;
+	color: #fff;
+	border: #000 solid 0;
+	border-radius: 50%;
+	cursor: pointer;
+	padding: 3px;
+}
+
+.todo-item {
+	margin: 0 auto .5rem;
+	padding: .5rem 1rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.done {
+	text-decoration: line-through;
 }
