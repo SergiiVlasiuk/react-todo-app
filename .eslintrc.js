@@ -59,7 +59,7 @@ module.exports = {
         },
       },
     ],
-    // 'space-after-keywords': ["error", "never"],   
+    // 'space-after-keywords': ["error", "never"],
     // 'space-after-keywords': ['error', 'always'],
     // // disable
     // 'init-declarations'  : 'off',
@@ -75,19 +75,27 @@ module.exports = {
       'args'               : 'after-used',
       'ignoreRestSiblings' : false,
     }],
-    // 'no-unused-vars'                : 'warn',
     'comma-spacing'           : ['error', { 'before': false, 'after': true }],
     'space-in-parens'         : ['error', 'always', { 'exceptions': ['{}', '[]'] }],
     'template-tag-spacing'    : ['error', 'always'],
     'max-statements-per-line' : ['error', { 'max': 1 }],
     'react/jsx-uses-vars'     : 'error',
-    
+    'arrow-body-style'        : ['error', 'as-needed'],
+    'arrow-spacing'           : ['error', { 'before': true, 'after': true }],
+    'react/jsx-sort-props'    : [ 'error' ],
+    'no-trailing-spaces'      : 'error',
+    // 'no-trailing-spaces'      : ['error', { 'skipBlankLines': true }],
+    'no-unused-expressions'   : 'warn',
+    'no-unused-vars'          : 'warn',
+    'max-statements-per-line' : 'error',
+    // 'max-statements-per-line' : ['error', { 'max': 2 }],
+
     // 'react/jsx-max-props-per-line': [1, {
     //   'maximum': {},
     //   // 'when': 'always',
     // }],
-    // 'react/jsx-uses-react' : ['error'],
-    // 'react/jsx-uses-vars'  : ['error'],
+    // 'react/jsx-uses-react': ['error'],
+    // 'react/jsx-uses-vars': ['error'],
     // 'react/jsx-props-multiline': [true, {
     //   'maximum': {
     //     'single' : 1,
@@ -95,7 +103,7 @@ module.exports = {
     //   },
     //   'when': 'always',
     // }],
-    
+
     // 'react/jsx-filename-extension' : [1, { 'extensions': ['.js', '.jsx'] }],
   },
 }
