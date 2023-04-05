@@ -80,7 +80,7 @@ module.exports = {
     'template-tag-spacing'    : ['error', 'always'],
     'max-statements-per-line' : ['error', { 'max': 1 }],
     'react/jsx-uses-vars'     : 'error',
-    'arrow-body-style'        : ['error', 'as-needed'],
+    // 'arrow-body-style'        : ['warn', 'as-needed'],
     'arrow-spacing'           : ['error', { 'before': true, 'after': true }],
     'react/jsx-sort-props'    : [ 'error' ],
     'no-trailing-spaces'      : 'error',
@@ -89,6 +89,7 @@ module.exports = {
     'no-unused-vars'          : 'warn',
     'max-statements-per-line' : 'error',
     // 'max-statements-per-line' : ['error', { 'max': 2 }],
+    'max-lines'               : ['error', {'max': 300, 'skipBlankLines': true}],
 
     // 'react/jsx-max-props-per-line': [1, {
     //   'maximum': {},

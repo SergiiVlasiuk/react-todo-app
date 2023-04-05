@@ -1,0 +1,37 @@
+.modal {
+  position: fixed;
+  /* position: relative; */
+  /* position: absolute; */
+  display: flex;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background-color: #aaf68325;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 2rem;
+  width: 400px;
+  border-radius: 5px;
+  background: #fff;
+  height: 200px;
+}
+.modal-body>* {
+  display: inline-block;
+}
+.modal-body-main {
+  flex: 1 1 auto;
+}
+
+.modal-button {
+  font-size: 1.5rem;
+  padding: 5px;
+  /* margin-bottom: 10px; */
+  align-self: end;
+}

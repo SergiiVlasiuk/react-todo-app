@@ -1,0 +1,15 @@
+.add-todo {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input[type=text],
+button[type=submit] {
+  /* text-size-adjust: 3.5rem; */
+  /* height: 3rem; */
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1.6rem;
+}

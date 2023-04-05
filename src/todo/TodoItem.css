@@ -1,0 +1,29 @@
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto .5rem;
+  padding: .5rem .5rem;
+  border: #ccc 1px solid;
+  border-radius: 5px;
+}
+
+.todo-item input {
+  margin-right: 1rem;
+}
+
+.todo-item button,
+.todo-item span {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.rm {
+  background: red;
+  border-radius: 50%;
+  padding: 5px;
+}
