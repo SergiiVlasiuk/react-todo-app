@@ -1,0 +1,16 @@
+.add-todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.add-todo input[type=text],
+.add-todo button[type=submit] {
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1.6rem;
+}
+.add-todo button[type=submit] {
+  cursor: pointer;
+}

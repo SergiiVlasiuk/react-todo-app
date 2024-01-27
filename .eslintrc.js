@@ -34,7 +34,7 @@ module.exports = {
     // We want to force semicolons
     semi               : ['error', 'never'],
     // We use 2 spaces to indent our code
-    indent             : ['error', 2],
+    indent             : ['error', 2, { 'SwitchCase': 1 }],
     // We want to avoid extraneous spaces
     'no-multi-spaces'  : ['error'],
     // We want to not validate props types
